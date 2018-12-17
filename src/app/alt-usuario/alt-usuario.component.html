@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <h2 class="text-center">Alterar usuário</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input formControlName="nome" placeholder="Nome" name="nome" class="form-control" id="nome">
+    </div>
+
+    <div class="form-group">
+      <label for="dataNascimento">Data de Nasc.:</label>
+      <input formControlName="dataNascimento" placeholder="Data Nasc" name="dataNascimento" class="form-control" id="dataNascimento">
+    </div>
+
+    <button class="btn btn-success">Alterar</button>
+  </form>
+</div>

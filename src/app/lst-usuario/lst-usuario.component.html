@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2> User Details</h2>
+  <button class="btn btn-danger" (click)="incluirUsuario()">Incluir usuário</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Data de Nascimento</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td class="hidden"></td>
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.email}}</td>
+      <td>{{usuario.dataNascimento | date:'dd/MM/yyyy'}}</td>
+      <td><button class="btn btn-danger" (click)="excluirUsuario(usuario)"> Excluir</button>
+        <button class="btn btn-danger" (click)="alterarUsuario(usuario)" style="margin-left: 20px;">Alterar</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

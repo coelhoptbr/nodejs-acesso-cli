@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class UsuarioService {
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'https://acesso-api.herokuapp.com/acesso/usuarios/';
+  baseUrl: string = 'https://java-springboot-acesso-api.herokuapp.com/acesso/usuarios/';
 
   buscarUsuarios(){
     return this.http.get(this.baseUrl).pipe(

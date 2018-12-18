@@ -9,7 +9,7 @@ export class AutenticacaoService {
   }
 
   login(email: string, senha: string) {
-    return this.http.post<any>('https://acesso-api.herokuapp.com/acesso/login/', {email: email, senha: senha})
+    return this.http.post<any>('https://java-springboot-acesso-api.herokuapp.com/acesso/login/', {email: email, senha: senha})
       .pipe(map(logado => {
         if (logado) {
           localStorage.setItem('currentUser', JSON.stringify(email));
